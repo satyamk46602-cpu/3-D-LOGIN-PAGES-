@@ -1,0 +1,103 @@
+/* General styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+    background: linear-gradient(135deg, #4f7bcd, #699bf1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+
+/* 3D login box */
+.login-container {
+    background: rgba(207, 26, 77, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    transform: rotateY(10deg);
+    transition: transform 0.6s ease;
+}
+
+.login-container:hover {
+    transform: rotateY(0deg);
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+/* Input fields */
+.input-box {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-bottom: 2px solid #fff;
+    background: transparent;
+    outline: none;
+}
+
+.input-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    color: #ccc;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #00ffe1;
+    font-size: 12px;
+}
+
+/* Button */
+.btn {
+    width: 100%;
+    background: #00ffe1;
+    border: none;
+    padding: 10px;
+    color: #000;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 15px #00ffe1;
+}
+
+.btn:hover {
+    background: #00b3a4;
+}
+
+/* Forgot Password */
+.forgot {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.forgot a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.forgot a:hover {
+    text-decoration: underline;
+}
